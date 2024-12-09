@@ -11,15 +11,15 @@ FROM ubuntu:${UBUNTU_VER}
 ARG DEBIAN_FRONTEND=noninteractive
 
 # System packages
-RUN apt-get update && apt-get install -yq curl wget jq vim build-essential libsox-dev  ffmpeg
+RUN apt-get update && apt-get install -yq git curl wget jq vim build-essential libsox-dev  ffmpeg
 # RUN apt-get install build-essential 
 # RUN apt-get install libsox-dev 
 # RUN apt-get install ffmpeg 
 
 ARG USER=e3da
-ARG USER_ID=1001
+ARG USER_ID=1003
 ARG USER_GROUP=e3da
-ARG USER_GROUP_ID=1001
+ARG USER_GROUP_ID=1003
 ARG USER_HOME=/home/${USER}
 
 # create a user group and a user (this works only for debian based images)
